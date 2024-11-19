@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bse{
+            width: 500px;
+            height: 20px;
+            background-color: aqua;
+            perspective:100px;
+            perspective-origin: bottom;
+            transform: rotateY(100deg);
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+        }
+        .bse:hover{
+            background-color: brown;
+            transform: rotateY(180deg);
+        }
+        .main{
+            color:white;
+           
+            background-color: brown;
+            width:500px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+           transform: rotateX(0) scaleZ(1);
+            transition:all 3s linear ; 
+        }
+        .main:hover{
+           
+            background-color:green;
+           transform: rotateX(360deg) scaleZ(50);
+        }
+     .box{
+        visibility: hidden;
+        transition: all 3s; 
+       
+     }
+     .main:hover .box{
+        visibility: visible;
+     }
+    
+    </style>
+</head>
+<body>
+    <div class="bse">
+    <div class="main" id="main">
+        <div class="box">
+            helloo
+        </div>
+    </div></div>
+    <script>
+let arr=['a','b'];
+
+        document.getElementById('main').addEventListener('click',()=>document.getElementById('main').style.width='100px')
+    </script>
+    <script src="in.js"></script>
+</body>
+</html>
